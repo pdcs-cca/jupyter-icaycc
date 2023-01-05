@@ -25,3 +25,9 @@ ln -s /snap/bin/certbot /usr/bin/certbot
 certbot --nginx --agree-tos -d emrys.atmosfera.unam.mx
 
 # Configuración formato del historial
+cat /etc/profile.d/history.sh 
+export PROMPT_COMMAND="history -a; history -c ; history -r"
+export HISTSIZE=500000
+export HISTFILESIZE=500000
+export HISTCONTROL="erasedups:ignoreboth"
+export HISTTIMEFORMAT='%F %T '
