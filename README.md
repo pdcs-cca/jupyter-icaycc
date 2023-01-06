@@ -19,14 +19,14 @@ systemctl --now disable ufw.service
 # Configuración zona horaria y hostname 
 ~~~bash
 timedatectl set-timezone America/Mexico_City
-hostnamectl hostname emrys.atmosfera.unam.mx
+hostnamectl hostname servidor
 ~~~
 # Instalación  certbot
 ~~~bash
 snap refresh core
 snap install --classic certbot
 ln -s /snap/bin/certbot /usr/bin/certbot
-certbot --nginx --agree-tos -d emrys.atmosfera.unam.mx
+certbot --nginx --agree-tos -d servidor 
 ~~~
 # Configuración formato del historial
 ~~~bash
