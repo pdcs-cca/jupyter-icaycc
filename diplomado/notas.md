@@ -47,6 +47,8 @@ prefix: /opt/software/apps/python/mambaforge/diplomado2023
 
 ## GRads
 
+~~~bash
+LANG=C.UTF-8 LC_ALL=C.UTF-8
 apptainer push docker://debian:11
 apt update
 apt install -y curl perl-modules
@@ -58,6 +60,9 @@ bash Mambaforge-Linux-x86_64.sh -b -p /opt/grads
 source /opt/grads/etc/profile.d/conda.sh
 conda activate base
 mamba install ipykernel
-
+mamba clean --tarballs --index-cache --packages --yes
+find $CONDA_PREFIX  -follow -type f -name '*.a' -delete
+find $CONDA_PREFIX  -follow -type f -name '*.pyc' -delete
+~~~~
 
 
