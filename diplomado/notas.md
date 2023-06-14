@@ -63,6 +63,7 @@ mamba install ipykernel
 mamba clean --tarballs --index-cache --packages --yes
 find $CONDA_PREFIX  -follow -type f -name '*.a' -delete
 find $CONDA_PREFIX  -follow -type f -name '*.pyc' -delete
+conda clean --force-pkgs-dirs --all --yes 
 ~~~~
 
 
