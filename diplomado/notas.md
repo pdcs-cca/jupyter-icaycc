@@ -57,6 +57,7 @@ curl -L# https://sourceforge.net/projects/opengrads/files/grads2/2.2.1.oga.1/Lin
 mv -v opengrads-2.2.1.oga.1/Contents/* /usr/bin 
 curl -LO# https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh 
 bash Mambaforge-Linux-x86_64.sh -b -p /opt/grads
+rm Mambaforge-Linux-x86_64.sh
 source /opt/grads/etc/profile.d/conda.sh
 conda activate base
 mamba install ipykernel
